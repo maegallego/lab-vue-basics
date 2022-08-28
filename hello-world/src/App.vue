@@ -1,21 +1,28 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <NavBar />
+  <ComputedElem />
+  <list-of-elem />
+  <ButtonBgColor />
+  <FooterComponent />
 </template>
 
 <script>
-import { defineComponent } from '@vue/composition-api'
+import NavBar from './components/NavBar.vue';
+import ComputedElem from './components/ComputedElem.vue';
+import FooterComponent from './components/FooterComponent.vue';
+import ListOfElem from './components/listOfElem.vue';
+import ButtonBgColor from './components/ButtonBgColor.vue';
 
-export default defineComponent({
-  setup() {
-    
+export default {
+  components: {
+    NavBar,
+    ComputedElem,
+    FooterComponent,
+    ListOfElem,
+    ButtonBgColor,
   },
-})
+};
 </script>
-
 
 <style>
 #app {
